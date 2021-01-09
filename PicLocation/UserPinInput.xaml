@@ -1,0 +1,31 @@
+﻿<Window x:Class="PicLocation.UserPinInput"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PicLocation"
+        mc:Ignorable="d"
+        Title="UserPinInput" Height="450" Width="800">
+    <Border Margin="0,0,-135,-20"  >
+        <StackPanel Margin="0,0,438,295" Background="WhiteSmoke" Opacity=".8" >
+
+            <!-- Name of Pin-->
+            <TextBlock Text="Name of Pin" Margin="2 0 0 0"/>
+            <TextBox x:Name="NameOfPin" Margin="2 1 2 1" BorderBrush="Black"/>
+
+            <!--Description of Pin-->
+            <TextBlock Text="Description of Pin" Margin="2 0 0 0"/>
+            <TextBox x:Name="DescOfPin" Margin="2 1 2 1" BorderBrush="Black"/>
+
+            <!-- Type of pin drop down-->
+            <TextBlock Text="Type of Pin" Margin="2 0 0 0"/>
+            <ComboBox x:Name="TypeOfPin" SelectedIndex="0" BorderBrush="Black" Margin="2 1 2 1">
+                <ComboBoxItem Content="Picture Pin" Background="White" />
+                <ComboBoxItem Content="Destination Pin" Background="White"/>
+            </ComboBox>
+
+            <Button Click="UserInputRecieved" Content="Confirm" Margin="0 5 0 1"/>
+
+        </StackPanel>
+    </Border>
+</Window>
